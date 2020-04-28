@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button button;
     private Button buttonNoti;
+    private Button buttonFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openSensorActivity();
+            }
+        });
+        buttonFragment = findViewById(R.id.buttonToFragment);
+        buttonFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFragmentActivity();
             }
         });
 
@@ -77,6 +85,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openSensorActivity(){
         Intent intent = new Intent(this, SensorActivity.class);
+        startActivity(intent);
+    }
+
+    public void openFragmentActivity(){
+        Intent intent = new Intent(this, FragmentActivity.class);
         startActivity(intent);
     }
 
