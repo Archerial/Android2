@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Button button;
     private Button buttonNoti;
     private Button buttonFragment;
+    private Button buttonToNavFrag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openFragmentActivity();
+            }
+        });
+        buttonToNavFrag = findViewById(R.id.buttonToFragNav);
+        buttonToNavFrag.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openFragmentNavActivity();
             }
         });
 
@@ -90,6 +98,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openFragmentActivity(){
         Intent intent = new Intent(this, FragmentActivity.class);
+        startActivity(intent);
+    }
+
+    public void openFragmentNavActivity(){
+        Intent intent = new Intent(this, NavigationBetweenFragments.class);
         startActivity(intent);
     }
 
