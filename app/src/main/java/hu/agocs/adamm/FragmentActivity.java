@@ -1,8 +1,8 @@
-package hu.agocs.adama;
-
-import androidx.appcompat.app.AppCompatActivity;
+package hu.agocs.adamm;
 
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class FragmentActivity extends AppCompatActivity {
 

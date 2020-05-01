@@ -1,6 +1,4 @@
-package hu.agocs.adama;
-
-import androidx.appcompat.app.AppCompatActivity;
+package hu.agocs.adamm;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -12,7 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import java.lang.reflect.Array;
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 

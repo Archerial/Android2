@@ -1,4 +1,4 @@
-package hu.agocs.adama;
+package hu.agocs.adamm;
 
 import android.content.Context;
 import android.util.Log;
@@ -18,7 +18,7 @@ public class MyWorker extends Worker {
     @NonNull
     @Override
     public Result doWork() {
-        Log.e(TAG,"doWork: Interner connection changed" );
+        Log.e(TAG,"doWork: Internet connection changed" );
         return Result.success();
     }
 }

@@ -1,4 +1,4 @@
-package hu.agocs.adama;
+package hu.agocs.adamm;
 
 import org.junit.Test;
 

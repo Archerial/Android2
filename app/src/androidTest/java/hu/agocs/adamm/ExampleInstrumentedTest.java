@@ -1,4 +1,4 @@
-package hu.agocs.adama;
+package hu.agocs.adamm;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("hu.agocs.adama", appContext.getPackageName());
+        assertEquals("hu.agocs.adamm", appContext.getPackageName());
     }
 }

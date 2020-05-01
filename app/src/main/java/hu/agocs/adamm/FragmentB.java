@@ -1,4 +1,4 @@
-package hu.agocs.adama;
+package hu.agocs.adamm;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

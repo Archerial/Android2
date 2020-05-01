@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#8C3838"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/buttonNoti"
         android:layout_width="165dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="208dp"
+        android:layout_marginBottom="228dp"
         android:text="Notification "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,6 +46,29 @@
         android:layout_marginBottom="40dp"
         android:text="Fragment Navigation"
         app:layout_constraintBottom_toTopOf="@+id/buttonNoti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonVolley"
+        android:layout_width="128dp"
+        android:layout_height="43dp"
+        android:text="Volley"
+        app:layout_constraintBottom_toTopOf="@+id/buttonToFragNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.877" />
+
+    <Button
+        android:id="@+id/buttonIntent"
+        android:layout_width="110dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="32dp"
+        android:text="Retrofit"
+        app:layout_constraintBottom_toTopOf="@+id/buttonVolley"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />

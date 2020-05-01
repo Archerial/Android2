@@ -1,4 +1,12 @@
-package hu.agocs.adama;
+package hu.agocs.adamm;
+
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.Intent;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
@@ -8,15 +16,6 @@ import androidx.work.NetworkType;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
 
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.content.Context;
-import android.content.Intent;
-import android.os.Build;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonNoti;
     private Button buttonFragment;
     private Button buttonToNavFrag;
+    private Button buttonVoll;
+    private Button buttonRetro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 openFragmentNavActivity();
             }
         });
+        buttonVoll = findViewById(R.id.buttonVolley);
 
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(this,"MyNotification")
                 .setSmallIcon(R.drawable.ic_launcher_foreground)
@@ -76,6 +78,21 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         OneTimeWorkRequest oneTimeWorkRequest = new OneTimeWorkRequest.Builder(MyWorker.class).setConstraints(constraints).build();
         WorkManager.getInstance().enqueue(oneTimeWorkRequest);
+
+
+        buttonVoll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openVolleyActivity();
+            }
+        });
+        buttonRetro = findViewById(R.id.buttonIntent);
+        buttonRetro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openIntentAct();
+            }
+        });
 
     }
 
@@ -103,6 +120,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void openFragmentNavActivity(){
         Intent intent = new Intent(this, NavigationBetweenFragments.class);
+        startActivity(intent);
+    }
+
+    public void openVolleyActivity(){
+        Intent intent = new Intent(this, ActivityVolley.class);
+        startActivity(intent);
+    }
+
+    public void openIntentAct(){
+        Intent intent = new Intent(this, RetrofitActivity.class);
         startActivity(intent);
     }
 

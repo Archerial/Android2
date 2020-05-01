@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="hu.agocs.adama">
+    package="hu.agocs.adamm">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -9,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NavigationBetweenFragments"></activity>
+        <activity android:name=".RetrofitActivity"></activity>
+        <activity android:name=".ActivityVolley" />
+        <activity android:name=".NavigationBetweenFragments" />
         <activity android:name=".FragmentActivity" />
         <activity android:name=".SensorActivity" />
         <activity android:name=".MainActivity">
