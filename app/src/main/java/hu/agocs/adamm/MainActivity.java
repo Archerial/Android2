@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonToNavFrag;
     private Button buttonVoll;
     private Button buttonRetro;
+    private Button buttonRoomDb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         buttonVoll = findViewById(R.id.buttonVolley);
+        buttonRoomDb = findViewById(R.id.buttonRoom);
 
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(this,"MyNotification")
                 .setSmallIcon(R.drawable.ic_launcher_foreground)
@@ -91,6 +93,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openIntentAct();
+            }
+        });
+        buttonRoomDb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openRoomActivity();
             }
         });
 
@@ -130,6 +138,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openIntentAct(){
         Intent intent = new Intent(this, RetrofitActivity.class);
+        startActivity(intent);
+    }
+
+    public void openRoomActivity(){
+        Intent intent = new Intent(this, RoomActivity.class);
         startActivity(intent);
     }
 

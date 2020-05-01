@@ -9,68 +9,80 @@
 
     <Button
         android:id="@+id/buttonNoti"
-        android:layout_width="165dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="228dp"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
         android:text="Notification "
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonToFragNav" />
 
     <Button
         android:id="@+id/buttonToSensors"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="148dp"
+        android:layout_marginTop="36dp"
         android:text="Szenszorok"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNoti" />
 
     <Button
         android:id="@+id/buttonToFragment"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:text="ParameterFragments"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonToSensors" />
 
     <Button
         android:id="@+id/buttonToFragNav"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginTop="36dp"
         android:text="Fragment Navigation"
-        app:layout_constraintBottom_toTopOf="@+id/buttonNoti"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonIntent" />
 
     <Button
         android:id="@+id/buttonVolley"
-        android:layout_width="128dp"
+        android:layout_width="100dp"
         android:layout_height="43dp"
         android:text="Volley"
-        app:layout_constraintBottom_toTopOf="@+id/buttonToFragNav"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.877" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonToFragment"
+        app:layout_constraintVertical_bias="0.283" />
 
     <Button
         android:id="@+id/buttonIntent"
-        android:layout_width="110dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
         android:text="Retrofit"
-        app:layout_constraintBottom_toTopOf="@+id/buttonVolley"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRoom" />
+
+    <Button
+        android:id="@+id/buttonRoom"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:text="Room"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
